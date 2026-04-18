@@ -1,0 +1,13 @@
+.task__title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.done {
+    background-color: rgb(178, 221, 178) ;
+}
+
+.not-done {
+        background-color: rgb(239, 91, 81) ;
+
+}
