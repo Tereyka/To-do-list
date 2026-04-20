@@ -10,26 +10,31 @@
 </head>
 
 <body>
-    <header>
-
+    <header class="header__content">
+        <h1 class="tasks__title">Список задач</h1>
+        <input type="text" class="tasks__search" id="search-input" placeholder="Поиск">
     </header>
     <main>
         <section class="tasks">
-            <h1 class="tasks__title">Список задач</h1>
-            <input type="text" id="search-input" placeholder="Поиск">
-            <ul class="tasks__list" id="todo-list">
-            </ul>
+            <select class="tasks__status-filter" id="status-filter">
+                <option value="all">Все</option>
+                <option value="done">Выполненные</option>
+                <option value="not-done">Невыполненные</option>
+            </select>
             <div id="loading" style="display: none;">Загрузка...</div>
             <div id="error" style="display: none;">Ошибка</div>
-            <div class="details" id="task-details" style="display: none">
-                <h2 class="details__title">Детали задачи</h2>
-                <p id="detail-title"></p>
-                <p id="detail-status"></p>
-                <p id="detail-id"></p>
-                <p id="detail-user"></p>
-                <p id="detail-name"></p>
-                <p id="detail-email"></p>
-            </div>
+            <ul class="tasks__list" id="todo-list"></ul>
+            <div class="modal" id="task-modal">
+                <div class="modal__content" id="modal-content">
+                    <button class="modal__close" id="modal-close">×</button>
+                    <h2 class="details__title">Детали задачи</h2>
+                    <p id="detail-title"></p>
+                    <p id="detail-status"></p>
+                    <p id="detail-id"></p>
+                    <p id="detail-user"></p>
+                    <p id="detail-name"></p>
+                    <p id="detail-email"></p>
+                </div>
         </section>
     </main>
     <footer>
